@@ -1,8 +1,5 @@
 <h2 align="center">🖼️ Wallpapers Collection</h2>
 
-<p align="center">
-  <img src="https://i.imgur.com/ZTnjKwe.jpeg" alt="Wallpaper Preview" width="70%">
-</p>
 
 <p align="center">
   These are some of my favorite wallpapers used in my ricing setup. <br>
