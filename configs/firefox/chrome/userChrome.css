@@ -1,0 +1,114 @@
+:root{--WindowDraggingFromNewtabButton: drag !important} /*asdad*/
+
+/* Apply maximum transparency to the main toolbar areas */
+#navigator-toolbox,
+#TabsToolbar,      /* The tabs toolbar */
+#nav-bar,          /* The navigation bar (URL bar area) */
+#PersonalToolbar,  /* The bookmarks toolbar */
+#tabbrowser-tabs   /* The container for tabs */
+{
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important; /* Remove any box shadows that might add visible elements */
+}
+
+:root{
+--tab-border-radius: 6px !important;
+--NavbarWidth: 43;
+--TabsHeight: 36;
+--TabsBorder: 8;
+--NavbarHeightSmall: calc(var(--TabsHeight) + var(--TabsBorder))
+}
+@media screen and (min-width:1325px)
+{#nav-bar{margin-top: calc(var(--TabsHeight) * -1px - var(--TabsBorder) * 1px)!important; height: calc(var(--TabsHeight) * 1px + var(--TabsBorder) * 1px)} #TabsToolbar{margin-left: calc(1325px / 100 * var(--NavbarWidth)) !important} #nav-bar{margin-right: calc(100vw - calc(1325px / 100 * var(--NavbarWidth))) !important; vertical-align: center !important} #urlbar-container{min-width: 0px !important; flex: auto !important} toolbarspring{display: none !important}}
+@media screen and (min-width:850px) and (max-width:1324px)
+{#nav-bar{margin-top: calc(var(--TabsHeight) * -1px - var(--TabsBorder) * 1px) !important; height: calc(var(--TabsHeight) * 1px + var(--TabsBorder) * 1px)} #TabsToolbar{margin-left: calc(var(--NavbarWidth) * 1vw) !important} #nav-bar{margin-right: calc(100vw - calc(var(--NavbarWidth) * 1vw)) !important; vertical-align: center !important} #urlbar-container{min-width: 0px !important; flex: auto !important} toolbarspring{display: none !important} #TabsToolbar, #nav-bar{transition: margin-top .25s !important}}
+@media screen and (max-width:849px)
+{#nav-bar{padding: 0 5px 0 5px!important; height: calc(var(--NavbarHeightSmall) * 1px) !important} toolbarspring{display: none !important;} #TabsToolbar, #nav-bar{transition: margin-top .25s !important}}
+/* Removed redundant background rule for #nav-bar, #PersonalToolbar */
+#nav-bar{margin-left: 3px; border-top: none !important} .tab-background, .tab-stack { min-height: calc(var(--TabsHeight) * 1px) !important}
+#navigator-toolbox{appearance: none !important; border-radius: 0 !important}
+#navigator-toolbox-background{background-color: Field !important; background-image: none !important; appearance: none !important; border-radius: 0 !important}
+#navigator-toolbox-background:-moz-window-inactive{filter: contrast(90%);}
+:root{--tabpanel-background-color: -moz-Dialog !important}
+#firefox-view-button, #save-to-pocket-button, #tracking-protection-icon-container, .titlebar-spacer[type="pre-tabs"], .titlebar-spacer[type="post-tabs"]{display: none !important}
+/* Removed #tabbrowser-tabs background rule as it's included in the combined rule above */
+#PanelUI-menu-button, #unified-extensions-button, #reload-button, #stop-button {padding: 2px !important}
+#reload-button, #stop-button{margin: 1px !important;}
+#tabs-newtab-button, #new-tab-button{transition: .3s !important;color: transparent !important; fill: FieldText !important; background: none !important; opacity: 20%; padding-right: 20px !important; padding-left: 4px !important; -moz-window-dragging: var(--WindowDraggingFromNewtabButton)}
+#tabs-newtab-button:hover, #new-tab-button:hover{transition: .3s !important; color: transparent !important; fill: FieldText !important; opacity: 90%; padding-right: 20px !important; background: none !important; padding-left: 4px !important; -moz-window-dragging: var(--WindowDraggingFromNewtabButton)}
+#tabs-newtab-button > .toolbarbutton-icon , #new-tab-button > .toolbarbutton-icon{ background: none !important;}
+#urlbar-background{border: none !important; outline: none !important; transition: .15s !important;}
+
+/* This rule was hiding inactive tab and bookmark icons. It is removed. */
+/* The rule below ensures icons show on hover and provides transition */
+
+.tabbrowser-tab:not([pinned]):hover .tab-icon-image,.bookmark-item:hover .toolbarbutton-icon{opacity: 100!important; transition: .15s !important; display: inline-block!important; width: 16px!important; padding-left: 0!important}
+.tabbrowser-tab:not([hover]) .tab-icon-image,.bookmark-item:not([hover]) .toolbarbutton-icon{padding-left: 0!important}
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])>#tabbrowser-arrowscrollbox>.tabbrowser-tab[first-visible-unpinned-tab] {margin-inline-start: 0!important}
+.tabbrowser-tab:not(:hover) .tab-close-button{opacity: 0% !important; transition: .3s !important; display: -moz-box !important;}
+.tab-close-button[selected]:not(:hover){opacity: 45% !important; transition: .3s !important; display: -moz-box !important;}
+.tabbrowser-tab:hover .tab-close-button{opacity: 50%; transition: .3s !important; background: none !important; cursor: pointer; display: -moz-box !important;}
+.tab-close-button:hover{opacity: 100% !important; transition: .3s !important; background: none !important; cursor: pointer; display: -moz-box !important;}
+.tab-close-button[selected]:hover{opacity: 100% !important; transition: .3s !important; background: none !important; cursor: pointer; display: -moz-box !important;}
+#navigator-toolbox{border:none !important;}
+.titlebar-buttonbox-container{-moz-box-ordinal-group: auto;}
+.titlebar-button > .toolbarbutton-icon:-moz-lwtheme{-moz-context-properties: fill, stroke !important;}
+.titlebar-button > .toolbarbutton-icon {display: flex !important; height:unset !important; width: unset !important; appearance: -moz-window-decorations !important;}
+.titlebar-buttonbox{appearance: none !important}
+#titlebar .toolbarbutton-icon{-moz-context-properties: revert !important}
+.titlebar-close:not(:hover, :active) {fill: var(--toolbarbutton-icon-fill) !important; -moz-context-properties: fill !important; list-style-image: url("data:image/svg+xml,%3Csvg width='40' height='30' version='1.1' viewBox='0 0 40 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EVetro%3C/title%3E%3Cpath transform='matrix(3.7796 0 0 3.7795 -165 -533.51)' d='m47.718 143.71-0.18707 0.18706 1.2294 1.2294-1.2294 1.2289 0.18707 0.18707 1.2294-1.2289 1.2289 1.2289 0.18707-0.18707-1.2289-1.2289 1.2289-1.2294-0.18707-0.18706-1.2289 1.2294z' fill='context-fill' style='paint-order:stroke fill markers'/%3E%3C/svg%3E%0A")!important; margin: 0 !important; padding: 0!important; border: 0!important; border-radius: 0!important; height: 100%!important; width: 56px!important; appearance: none!important}
+.titlebar-close:hover {background-color: #f44!important; fill: var(--toolbarbutton-icon-fill) !important; -moz-context-properties: fill !important; list-style-image: url("data:image/svg+xml,%3Csvg width='40' height='30' version='1.1' viewBox='0 0 40 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EVetro%3C/title%3E%3Cpath transform='matrix(3.7796 0 0 3.7795 -165 -533.51)' d='m47.718 143.71-0.18707 0.18706 1.2294 1.2294-1.2294 1.2289 0.18707 0.18707 1.2294-1.2289 1.2289 1.2289 0.18707-0.18707-1.2289-1.2289 1.2289-1.2294-0.18707-0.18706-1.2289 1.2294z' fill='context-fill' style='paint-order:stroke fill markers;fill:%23ffffff' /%3E%3C/svg%3E%0A")!important; margin: 0 !important; padding: 0!important; border: 0!important; border-radius: 0!important; height: 100%!important; width: 56px!important; appearance: none!important}
+.titlebar-close:active {background-color: #f33!important; fill: var(--toolbarbutton-icon-fill) !important; -moz-context-properties: fill !important; list-style-image: url("data:image/svg+xml,%3Csvg width='40' height='30' version='1.1' viewBox='0 0 40 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EVetro%3C/title%3E%3Cpath transform='matrix(3.7796 0 0 3.7795 -165 -533.51)' d='m47.718 143.71-0.18707 0.18706 1.2294 1.2294-1.2294 1.2289 0.18707 0.18707 1.2294-1.2289 1.2289 1.2289 0.18707-0.18707-1.2289-1.2289 1.2289-1.2294-0.18707-0.18706-1.2289 1.2294z' fill='context-fill' style='paint-order:stroke fill markers;fill:%23ffffff' /%3E%3C/svg%3E%0A")!important; margin: 0 !important; padding: 0!important; border: 0!important; border-radius: 0!important; height: 100%!important; width: 56px!important; appearance: none!important}
+#TabsToolbar-customization-target {counter-reset: tabCount}.tabbrowser-tab {counter-increment: tabCount}
+#alltabs-button>.toolbarbutton-badge-stack>.toolbarbutton-icon {fill: var(--toolbarbutton-icon-fill) !important; -moz-context-properties: fill !important; list-style-image: url("data:image/svg+xml,%3Csvg width='40' height='30' version='1.1' viewBox='0 0 40 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EVetro%3C/title%3E%3Cpath transform='translate(49,-60)' d='m-29 78.888-7.0703-7.0703 0.70703-0.70703 6.3633 6.3633 6.3633-6.3633 0.70703 0.70703-6.3633 6.3633z' fill='context-fill' style='paint-order:stroke fill markers'/%3E%3C/svg%3E"); overflow: hidden!important; padding: 0!important; border: 0!important; width: 40px!important; height: calc(100% + 1px)!important; margin: 0 -2px 0 0!important; transform: translate(20%,15%); padding: 0 3px}
+#alltabs-button>.toolbarbutton-badge-stack {position: relative!important; border-radius: 0!important; padding: 0!important; border: 0!important; height: calc(100% + 1px)!important; width: 56px!important; margin: 0-2px 0 0!important}
+#alltabs-button>.toolbarbutton-badge-stack::before {content: counter(tabCount); color: var(--toolbarbutton-icon-fill) !important; position: absolute; top: 16.5px; left: 50%; transform: translate(-50%,-30%); padding: 0 3px}
+#urlbar:not(:hover):not([breakout][breakout-extend])>#urlbar-background {box-shadow: none!important; background: #0000 !important}
+.urlbarView-row{display: none !important}
+.urlbarView-row:nth-child(1), .urlbarView-row:nth-child(2){display: flex !important}
+#urlbar-anon-search-settings{margin-inline-start: 0px !important}
+#urlbar-container{margin-left: 1px !important}
+#sidebar-splitter{display: none}
+#sidebar-header{padding-bottom: 0!important; border-bottom: 0!important}
+#statuspanel-label{background-color: -moz-Dialog!important; border-color: transparent!important; border-radius: 5px !important; color: currentColor!important; margin: 0 0 2.5px 2px!important; padding: 5px!important; opacity: 100%;}
+#appMenu-fxa-separator{border-image:none !important;}
+#PanelUI-button, #wrapper-PanelUI-button{order: -2 !important}
+#nav-bar-overflow-button{order: -1 !important}
+#PanelUI-menu-button, #unified-extensions-button, #downloads-button{direction: rtl;}
+#back-button{padding-right: 2px !important} #forward-button{padding-right: 8px !important}
+#main-window:has(#toolbar-menubar:not([inactive])) #toolbar-menubar{margin-bottom: -20px !important}
+#main-window:has(#toolbar-menubar:not([inactive])) #toolbar-menubar .titlebar-buttonbox-container{margin-top: -1px !important; height: 44px !important}
+#main-window:has(#toolbar-menubar:not([inactive])):not(:has(#menu_mac_services)) #alltabs-button {margin-top: -24px !important; margin-bottom: 24.2px !important; }
+@media screen and (min-width:566px) {#main-window:has(#toolbar-menubar[autohide="false"]) #alltabs-button {margin: -25px 168px 25.2px 0 !important;}}
+#main-menubar{flex-wrap: wrap !important; max-width: calc(100vw - 226px);}
+@media screen and (max-width:565px) { #main-window:has(#toolbar-menubar:not([inactive])) #TabsToolbar-customization-target { margin-top: 20px;}#main-window:has(#toolbar-menubar:not([inactive])) #alltabs-button { height: 44px !important; position: absolute; top: 24px; right: 168px; } #main-window:has(#toolbar-menubar:not([inactive])) #toolbar-menubar { height: fit-content !important;}}
+#main-menubar { z-index: 1; }
+@media screen and (max-width:849px){
+.findbar-container > hbox[anonid="findbar-textbox-wrapper"]{width: 100% !important}
+.findbar-textbox {width: -moz-available !important}
+.findbar-container {display: flex !important; flex-wrap: wrap !important; height: unset !important}
+findbar{height: 90px !important}
+}
+@media screen and (min-width:522px) and (max-width:541px){.findbar-container > checkbox{margin-bottom: -12px !important}}
+@media screen and (max-width:521px){findbar{height: 122px !important}}
+@media screen and (min-width:850px) and (max-width:1324px) {.findbar-textbox{width: calc(64vw - 290px)!important}}
+@media screen and (min-width:1325px) {.findbar-textbox{width: 558px !important}}
+#mainPopupSet #tab-preview-panel .tab-preview-thumbnail-container {border-radius: 8px; border: none !important}
+#mainPopupSet #tab-preview-panel .tab-preview-thumbnail-container canvas{border-radius: 8px;}
+#tab-preview-panel {--panel-border-radius: 8px!important}
+.tab-group-label-container{border-top-left-radius: 8px !important; border-bottom-left-radius: 8px !important; background-color: color-mix(in oklab, var(--tab-group-color) 30%, #0000)!important; padding: 0px !important;}
+tab-group[collapsed] .tab-group-label-container{border-radius: 8px !important; transition-delay: .1s}
+.tab-group-label-container:after{display: none !important}
+tab-group:not([collapsed]) .tabbrowser-tab:last-of-type{border-top-right-radius: 8px !important; border-bottom-right-radius: 8px !important; padding-right: 4px !important}
+.tab-group-label { border: 0 !important; }
+tab-group .tabbrowser-tab{background-color: color-mix(in oklab, var(--tab-group-color) 30%, #0000)!important;}
+.tab-group-line{display: none !important}
+.tab-group-label{background: none !important; height: 100%; align-content: center;}
+#search-container {
+ display: none !important;
+}
+@media screen and (max-width: 949px) {
+#reload-button, #stop-button{display:none !important}
+#back-button, #forward-button{display: none !important}
+}
