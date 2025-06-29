@@ -11,7 +11,6 @@
   <a href="https://github.com/dharmx/walls" target="_blank">https://github.com/dharmx/walls</a>
 </p>
 
-
 <p align="center">
   <a href="a_beach_with_palm_trees_and_a_moon.png">
     <img src="a_beach_with_palm_trees_and_a_moon.png" alt="a_beach_with_palm_trees_and_a_moon" width="200" />
@@ -91,6 +90,9 @@
   <a href="a_street_with_buildings_and_trees.png">
     <img src="a_street_with_buildings_and_trees.png" alt="a_street_with_buildings_and_trees" width="200" />
   </a>
+  <a href="astronaut (copy).png">
+    <img src="astronaut (copy).png" alt="astronaut (copy)" width="200" />
+  </a>
   <a href="astronaut.png">
     <img src="astronaut.png" alt="astronaut" width="200" />
   </a>
@@ -106,8 +108,35 @@
   <a href="a_yellow_moon_in_the_sky.png">
     <img src="a_yellow_moon_in_the_sky.png" alt="a_yellow_moon_in_the_sky" width="200" />
   </a>
+  <a href="black_hole.png">
+    <img src="black_hole.png" alt="black_hole" width="200" />
+  </a>
+  <a href="cyberpunk.png">
+    <img src="cyberpunk.png" alt="cyberpunk" width="200" />
+  </a>
+  <a href="hyprland_kath.png">
+    <img src="hyprland_kath.png" alt="hyprland_kath" width="200" />
+  </a>
+  <a href="jake_the_dog.png">
+    <img src="jake_the_dog.png" alt="jake_the_dog" width="200" />
+  </a>
+  <a href="japanese_aesthetic.png">
+    <img src="japanese_aesthetic.png" alt="japanese_aesthetic" width="200" />
+  </a>
   <a href="lockdead.png">
     <img src="lockdead.png" alt="lockdead" width="200" />
+  </a>
+  <a href="pixel_sakura.gif">
+    <img src="pixel_sakura.gif" alt="pixel_sakura" width="200" />
+  </a>
+  <a href="pixel_sakura_static.png">
+    <img src="pixel_sakura_static.png" alt="pixel_sakura_static" width="200" />
+  </a>
+  <a href="post-apocalyptic_hacker.png">
+    <img src="post-apocalyptic_hacker.png" alt="post-apocalyptic_hacker" width="200" />
+  </a>
+  <a href="purple_leaves.png">
+    <img src="purple_leaves.png" alt="purple_leaves" width="200" />
   </a>
   <a href="wall0.png">
     <img src="wall0.png" alt="wall0" width="200" />
